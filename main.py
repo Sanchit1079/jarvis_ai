@@ -3,7 +3,7 @@ import os
 import sys
 import time
 import webbrowser
-#import pyautogui
+import pyautogui
 import pyttsx3
 import speech_recognition as sr
 import json

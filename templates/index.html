@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS - Just A Rather Very Intelligent System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Startup Screen -->
+    <div class="startup-screen" id="startup-screen">
+        <div class="startup-logo">
+            <i class="fas fa-microchip"></i>
+        </div>
+        <div class="startup-text">JARVIS</div>
+        <div class="startup-progress">
+            <div class="startup-bar"></div>
+        </div>
+        <div class="startup-status">INITIALIZING SYSTEMS...</div>
+    </div>
+
+    <!-- Arc reactor effect -->
+    <div class="arc-reactor">
+        <div class="reactor-ring ring-1"></div>
+        <div class="reactor-ring ring-2"></div>
+        <div class="reactor-ring ring-3"></div>
+    </div>
+    
+    <div class="container">
+        <div class="app-container">
+            <!-- HUD elements -->
+            <div class="hud-element hud-top-right"></div>
+            <div class="hud-element hud-bottom-left"></div>
+            
+            <!-- Header -->
+            <div class="app-header">
+                <div class="logo">
+                    <i class="fas fa-robot"></i>
+                    <div class="jarvis-logo">
+                        <h1>JARVIS</h1>
+                        <div class="logo-subtitle">Just A Rather Very Intelligent System</div>
+                    </div>
+                </div>
+                <div class="controls">
+                    <button id="mic-button" title="Speak">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </div>
+                <div class="scan-line"></div>
+            </div>
+            
+            <!-- Chat area -->
+            <div class="chat-container" id="chat-container">
+                <!-- Chat messages will appear here -->
+                <div class="jarvis-circle">
+                    <div class="circle-pulse"></div>
+                    <div class="circle-pulse"></div>
+                    <div class="circle-pulse"></div>
+                </div>
+            </div>
+            
+            <!-- Input area -->
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Ask me anything, Sir..." autocomplete="off">
+                <button id="send-button">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+                
+                <!-- Power indicator -->
+                <div class="power-indicator">
+                    <span>POWER</span>
+                    <div class="power-bar">
+                        <div class="power-level"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
